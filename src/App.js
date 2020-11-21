@@ -9,7 +9,7 @@ import Rank from './components/Rank/Rank';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 
 const app = new Clarifai.App({
-  apiKey: 'b6e90814083c466984888600632f51c2'
+  // apiKey: api key goes here
 });
 
 const particlesOptions = {
