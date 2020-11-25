@@ -11,3 +11,7 @@ Notable Features include:
 -Link any photo you want with url to have the face detected.
 
 -Tilt React used to give logo more pop and stand out of page.
+
+-Uses: Node.js, Express.js, React, PostgreSQL
+
+-Full user database to enable the authentication ranks.
