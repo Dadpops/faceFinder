@@ -1,8 +1,9 @@
-Facial Recognition App using React
+Facial Recognition App using React, Express, Node, PostgresSQL.
+
 
 Notable Features include:
 
--Several reusable components built (Navigation, Logo, ImageLink).
+-Several reusable components built (Navigation, Logo, ImageLink, Signin, Register).
 
 -Particles.js added to give background a more populated and vibrant look.
 
@@ -11,3 +12,9 @@ Notable Features include:
 -Link any photo you want with url to have the face detected.
 
 -Tilt React used to give logo more pop and stand out of page.
+
+-Full user database with PostgresSQL and knex.js.
+
+-Bcrypt hash security to safely store passwords.
+
+
