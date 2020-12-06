@@ -83,9 +83,9 @@ class App extends Component {
         Clarifai.FACE_DETECT_MODEL,
         this.state.input)
       .then(response => {
-        console.log('hi', response)
+        console.log('onButtonSubmit - Response ->', response)
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://cryptic-cliffs-86571.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
