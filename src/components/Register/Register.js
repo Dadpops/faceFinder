@@ -10,6 +10,7 @@ class Register extends React.Component {
     }
   }
 
+  // State changes from input values
   onNameChange = (event) => {
     this.setState({name: event.target.value})
   }
@@ -22,6 +23,7 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
 
+  // Register Users by sending info to server
   onSubmitSignIn = () => {
     fetch('https://cryptic-cliffs-86571.herokuapp.com/register', {
       method: 'post',

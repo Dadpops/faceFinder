@@ -10,10 +10,12 @@ import ImageLink from './components/ImageLink/ImageLink';
 import Rank from './components/Rank/Rank';
 import './App.css';
 
+// Clarifai API key
 const app = new Clarifai.App({
-  apiKey: 'b6e90814083c466984888600632f51c2'
+  apiKey: 'Your API goes here!'
 });
 
+// Background particles
 const particlesOptions = {
   particles: {
     number: {
@@ -55,6 +57,7 @@ class App extends Component {
     }})
   }
 
+  // Facial Detection Box
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
@@ -76,6 +79,7 @@ class App extends Component {
     this.setState({input: event.target.value});
   }
 
+  // Send image through clarifai api and display box
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
     app.models
@@ -103,6 +107,7 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  // Redirect Signout
   onRouteChange = (route) => {
     if (route === 'signout') {
       this.setState({isSignedIn: false})
