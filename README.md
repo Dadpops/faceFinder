@@ -71,6 +71,35 @@ onSubmitSignIn = () => {
 
 -Link any photo you want with url to have the face detected.
 
+```
+onButtonSubmit = () => {
+    this.setState({imageUrl: this.state.input});
+    app.models
+      .predict(
+        Clarifai.FACE_DETECT_MODEL,
+        this.state.input)
+      .then(response => {
+        console.log('onButtonSubmit - Response ->', response)
+        if (response) {
+          fetch('https://cryptic-cliffs-86571.herokuapp.com/image', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              id: this.state.user.id
+            })
+          })
+            .then(response => response.json())
+            .then(count => {
+              this.setState(Object.assign(this.state.user, { entries: count}))
+            })
+
+        }
+        this.displayFaceBox(this.calculateFaceLocation(response))
+      })
+      .catch(err => console.log(err));
+  }
+  ```
+
 -Tilt React used to give logo more pop and stand out of page.
 
 -Full user database with PostgresSQL and knex.js.
