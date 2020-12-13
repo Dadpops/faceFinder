@@ -31,6 +31,40 @@ const particlesOptions = {
 
 -User Authentication to keep record of who has used the app most and ranks users based on usage.
 
+onSubmitSignIn = () => {
+
+    fetch('https://cryptic-cliffs-86571.herokuapp.com/signin', {
+    
+      method: 'post',
+      
+      headers: {'Content-Type': 'application/json'},
+      
+      body: JSON.stringify({
+      
+        email: this.state.signInEmail,
+        
+        password: this.state.signInPassword
+        
+      })
+      
+    })
+    
+      .then(response => response.json())
+      
+      .then(user => {
+      
+        if (user.id) {
+        
+          this.props.loadUser(user)
+          
+          this.props.onRouteChange('home');
+          
+        }
+        
+      })
+      
+  }
+
 -Link any photo you want with url to have the face detected.
 
 -Tilt React used to give logo more pop and stand out of page.
