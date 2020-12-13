@@ -31,7 +31,7 @@ Notable Features include:
 
 -User Authentication to keep record of who has used the app most and ranks users based on usage.
 
-  onSubmitSignIn = () => {
+ ```onSubmitSignIn = () => {
 
     fetch('https://cryptic-cliffs-86571.herokuapp.com/signin', {
     
@@ -63,7 +63,7 @@ Notable Features include:
         
       })
       
-  }
+  }```
 
 -Link any photo you want with url to have the face detected.
 
