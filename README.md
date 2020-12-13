@@ -31,7 +31,7 @@ const particlesOptions = {
 
 -User Authentication to keep record of who has used the app most and ranks users based on usage.
 
-onSubmitSignIn = () => {
+  onSubmitSignIn = () => {
 
     fetch('https://cryptic-cliffs-86571.herokuapp.com/signin', {
     
