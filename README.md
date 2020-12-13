@@ -8,15 +8,25 @@ Notable Features include:
 -Particles.js added to give background a more populated and vibrant look.
 
 const particlesOptions = {
+
   particles: {
+  
     number: {
+    
       value: 150,
+      
       density: {
+      
         enable: true,
+        
         value_area: 1000,
+        
       }
+      
     }
+    
   }
+  
 }
 
 -User Authentication to keep record of who has used the app most and ranks users based on usage.
