@@ -9,25 +9,15 @@ Notable Features include:
 
 ```
 const particlesOptions = {
-
   particles: {
-  
     number: {
-    
       value: 150,
-      
       density: {
-      
         enable: true,
-        
         value_area: 1000,
-        
       }
-      
     }
-    
   }
-  
 }
 ```
 
@@ -35,37 +25,21 @@ const particlesOptions = {
 
 ```
 onSubmitSignIn = () => {
-
     fetch('https://cryptic-cliffs-86571.herokuapp.com/signin', {
-    
       method: 'post',
-      
       headers: {'Content-Type': 'application/json'},
-      
-      body: JSON.stringify({
-      
-        email: this.state.signInEmail,
-        
+      body: JSON.stringify({ 
+        email: this.state.signInEmail, 
         password: this.state.signInPassword
-        
       })
-      
     })
-    
       .then(response => response.json())
-      
       .then(user => {
-      
         if (user.id) {
-        
           this.props.loadUser(user)
-          
           this.props.onRouteChange('home');
-          
         }
-        
       })
-      
   }
  ```
 
