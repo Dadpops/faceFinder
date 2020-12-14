@@ -7,7 +7,7 @@ Notable Features include:
 
 -Particles.js added to give background a more populated and vibrant look.
 
-```
+```javascript
 const particlesOptions = {
   particles: {
     number: {
