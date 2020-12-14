@@ -23,7 +23,7 @@ const particlesOptions = {
 
 -User Authentication to keep record of who has used the app most and ranks users based on usage.
 
-```
+```javascript
 onSubmitSignIn = () => {
     fetch('https://cryptic-cliffs-86571.herokuapp.com/signin', {
       method: 'post',
@@ -45,7 +45,7 @@ onSubmitSignIn = () => {
 
 -Link any photo you want with url to have the face detected.
 
-```
+```javascript
 onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
     app.models
